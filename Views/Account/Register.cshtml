@@ -1,5 +1,5 @@
-ï»¿@{
-    ViewData["Title"] = "Login";
+@{
+    ViewData["Title"] = "Registro";
 }
 
 <style>
@@ -12,7 +12,7 @@
         font-family: 'Segoe UI', sans-serif;
     }
 
-    .login-container {
+    .register-container {
         background-color: white;
         border-radius: 20px;
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -21,7 +21,7 @@
         max-width: 400px;
     }
 
-    .login-title {
+    .register-title {
         font-size: 28px;
         font-weight: bold;
         margin-bottom: 25px;
@@ -29,16 +29,8 @@
         color: #333;
     }
 
-    .form-label {
-        font-weight: 500;
-        margin-bottom: 5px;
-        color: #555;
-    }
-
     .form-control {
         border-radius: 10px;
-        padding: 10px 12px;
-        font-size: 15px;
     }
 
     .btn-primary {
@@ -62,12 +54,16 @@
         margin: 0 auto 20px auto;
         max-height: 60px;
     }
+
+    .text-center a {
+        text-decoration: none;
+    }
 </style>
 
-<div class="login-container">
+<div class="register-container">
     <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png" alt="Logo" class="logo" />
 
-    <div class="login-title">Bem-vindo de volta</div>
+    <div class="register-title">Crie sua conta</div>
 
     @if (ViewBag.Error != null)
     {
@@ -76,23 +72,27 @@
         </div>
     }
 
-    <form method="post" asp-action="Login">
+    <form method="post" asp-action="Register">
+        <div class="mb-3">
+            <label for="Name" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="Name" name="name" placeholder="Seu nome" required />
+        </div>
+
         <div class="mb-3">
             <label for="Email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="Email" name="email" required />
+            <input type="email" class="form-control" id="Email" name="email" placeholder="email@exemplo.com" required />
         </div>
 
         <div class="mb-4">
             <label for="Password" class="form-label">Senha</label>
-            <input type="password" class="form-control" id="Password" name="password" required />
+            <input type="password" class="form-control" id="Password" name="password" placeholder="Senha" required />
         </div>
 
-        <button type="submit" class="btn btn-primary w-100 py-2">Entrar</button>
+        <button type="submit" class="btn btn-primary w-100 py-2">Registrar</button>
 
         <div class="mt-3 text-center">
-            <span>NÃ£o tem uma conta?</span>
-            <a href="/Account/Register" class="text-primary fw-bold">Cadastre-se</a>
+            <span>Já tem uma conta?</span>
+            <a href="/Account/Login" class="text-primary fw-bold">Faça login</a>
         </div>
-
     </form>
 </div>

@@ -296,3 +296,4 @@ C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\obj\
 C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\obj\Debug\net8.0\SistemaGestaoMedica.pdb
 C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\obj\Debug\net8.0\SistemaGestaoMedica.genruntimeconfig.cache
 C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\obj\Debug\net8.0\ref\SistemaGestaoMedica.dll
+C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
