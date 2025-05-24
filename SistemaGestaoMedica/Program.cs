@@ -3,10 +3,13 @@ using SistemaGestaoMedica.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Obtém a connection string do appsettings.json
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
+// Configura o DbContext para usar PostgreSQL
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseMySql(connectionString, new MySqlServerVersion(new Version(9, 1, 0))));
+    options.UseNpgsql(connectionString)
+);
 
 builder.Services.AddControllersWithViews();
 
@@ -16,12 +19,13 @@ if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
     app.UseHsts();
-};
+}
 
-app.UseRouting();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
 app.UseRouting();
+
 app.UseAuthorization();
 
 app.MapControllerRoute(
