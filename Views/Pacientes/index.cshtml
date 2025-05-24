@@ -1,29 +1,69 @@
-﻿@model IEnumerable<SistemaGestaoMedica.Models.Paciente>
+﻿@{
+    ViewData["Title"] = "Pacientes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 
-<h2>Pacientes</h2>
-<a asp-action="Create" class="btn btn-primary">Novo Paciente</a>
-<table class="table mt-3">
-    <thead>
-        <tr>
-            <th>Nome</th>
-            <th>CPF</th>
-            <th>Telefone</th>
-            <th>Email</th>
-            <th>Ações</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var paciente in Model)
-        {
-            <tr>
-                <td>@paciente.Nome</td>
-                <td>@paciente.CPF</td>
-                <td>@paciente.Telefone</td>
-                <td>@paciente.Email</td>
-                <td>
-                    <!-- Editar e Excluir futuramente -->
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+<style>
+    .search-card {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 32px;
+        border-radius: 16px;
+        background: #ffffff;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .form-label {
+        font-weight: 600;
+    }
+
+    .form-control {
+        border-radius: 12px;
+    }
+
+    .btn-custom {
+        border-radius: 12px;
+        padding: 10px 24px;
+        font-weight: 500;
+    }
+
+    .btn-success {
+        background-color: #28a745;
+    }
+
+    .btn-warning {
+        background-color: #ffc107;
+        color: #000;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+    }
+
+    .header-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 24px;
+        color: #333;
+    }
+</style>
+
+<div class="search-card">
+    <div class="header-title">🔎 Pesquisar Paciente</div>
+    <form asp-action="Index" method="get" class="row g-3 align-items-end">
+        <div class="col-md-6">
+            <label class="form-label">CPF</label>
+            <input type="text" name="cpf" class="form-control" placeholder="Digite o CPF">
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Nome</label>
+            <input type="text" name="nome" class="form-control" placeholder="Digite o nome">
+        </div>
+        <div class="col-12 d-flex justify-content-end mt-4">
+            <button type="submit" class="btn btn-warning btn-custom me-2">Pesquisar</button>
+            <a href="@Url.Action("Index")" class="btn btn-primary btn-custom me-2">Listar Todos</a>
+            <a href="@Url.Action("Create")" class="btn btn-success btn-custom">+ Novo</a>
+        </div>
+    </form>
+</div>
