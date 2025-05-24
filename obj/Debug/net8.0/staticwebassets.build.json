@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xA7zqkISU5FTfr9Gx8peH6mxG1e928x+8fCb5VAJEo4=",
+  "Hash": "jrL6oJo2mAIhmWdY9VV0sFtc2FtkHlDwxwuEiNMlYI4=",
   "Source": "SistemaGestaoMedica",
   "BasePath": "_content/SistemaGestaoMedica",
   "Mode": "Default",
@@ -99,6 +99,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\goku1\\source\\repos\\vsdavis\\SistemaGestaoMedica\\SistemaGestaoMedica\\wwwroot\\images\\logo.png",
+      "SourceId": "SistemaGestaoMedica",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\goku1\\source\\repos\\vsdavis\\SistemaGestaoMedica\\SistemaGestaoMedica\\wwwroot\\",
+      "BasePath": "_content/SistemaGestaoMedica",
+      "RelativePath": "images/logo#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "m4vta386sa",
+      "Integrity": "KoeIKTE8os3KD8p7SxExBtWue7X1EH4FveQB1f9sqhA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\logo.png"
     },
     {
       "Identity": "C:\\Users\\goku1\\source\\repos\\vsdavis\\SistemaGestaoMedica\\SistemaGestaoMedica\\wwwroot\\js\\site.js",
@@ -1481,6 +1502,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+        }
+      ]
+    },
+    {
+      "Route": "images/logo.m4vta386sa.png",
+      "AssetFile": "C:\\Users\\goku1\\source\\repos\\vsdavis\\SistemaGestaoMedica\\SistemaGestaoMedica\\wwwroot\\images\\logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "302973"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KoeIKTE8os3KD8p7SxExBtWue7X1EH4FveQB1f9sqhA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 17 May 2025 15:47:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m4vta386sa"
+        },
+        {
+          "Name": "label",
+          "Value": "images/logo.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KoeIKTE8os3KD8p7SxExBtWue7X1EH4FveQB1f9sqhA="
+        }
+      ]
+    },
+    {
+      "Route": "images/logo.png",
+      "AssetFile": "C:\\Users\\goku1\\source\\repos\\vsdavis\\SistemaGestaoMedica\\SistemaGestaoMedica\\wwwroot\\images\\logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "302973"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KoeIKTE8os3KD8p7SxExBtWue7X1EH4FveQB1f9sqhA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 17 May 2025 15:47:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KoeIKTE8os3KD8p7SxExBtWue7X1EH4FveQB1f9sqhA="
         }
       ]
     },
@@ -6263,7 +6366,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 27 Apr 2025 02:50:35 GMT"
+          "Value": "Sat, 24 May 2025 17:20:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6308,7 +6411,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 27 Apr 2025 02:50:35 GMT"
+          "Value": "Sat, 24 May 2025 17:20:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6353,7 +6456,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 27 Apr 2025 02:50:35 GMT"
+          "Value": "Sat, 24 May 2025 17:20:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6390,7 +6493,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 27 Apr 2025 02:50:35 GMT"
+          "Value": "Sat, 24 May 2025 17:20:38 GMT"
         },
         {
           "Name": "Cache-Control",

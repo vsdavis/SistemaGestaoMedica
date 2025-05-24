@@ -18,6 +18,9 @@ namespace SistemaGestaoMedica.Models
         public string? medicamentos { get; set; }
         public string? cirurgias { get; set; }
         public string? observacoes { get; set; }
+        public string? contatoEmergencia { get; set; }
+        public string? Email { get; set; }
+        public string? Telefone { get; set; }
 
     }
 }

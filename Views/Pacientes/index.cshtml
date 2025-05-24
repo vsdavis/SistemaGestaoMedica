@@ -1,0 +1,29 @@
+﻿@model IEnumerable<SistemaGestaoMedica.Models.Paciente>
+
+<h2>Pacientes</h2>
+<a asp-action="Create" class="btn btn-primary">Novo Paciente</a>
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>Telefone</th>
+            <th>Email</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var paciente in Model)
+        {
+            <tr>
+                <td>@paciente.Nome</td>
+                <td>@paciente.CPF</td>
+                <td>@paciente.Telefone</td>
+                <td>@paciente.Email</td>
+                <td>
+                    <!-- Editar e Excluir futuramente -->
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
