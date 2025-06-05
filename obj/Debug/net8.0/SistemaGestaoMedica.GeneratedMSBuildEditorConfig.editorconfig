@@ -60,6 +60,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/goku1/source/repos/vsdavis/SistemaGestaoMedica/SistemaGestaoMedica/Views/Agenda/DetalharAtendimento.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbmRhXERldGFsaGFyQXRlbmRpbWVudG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/goku1/source/repos/vsdavis/SistemaGestaoMedica/SistemaGestaoMedica/Views/Agenda/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbmRhXGluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -82,6 +86,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/goku1/source/repos/vsdavis/SistemaGestaoMedica/SistemaGestaoMedica/Views/Home/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxpbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/goku1/source/repos/vsdavis/SistemaGestaoMedica/SistemaGestaoMedica/Views/Medicamentos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudG9zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/goku1/source/repos/vsdavis/SistemaGestaoMedica/SistemaGestaoMedica/Views/Medicamentos/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudG9zXGluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/goku1/source/repos/vsdavis/SistemaGestaoMedica/SistemaGestaoMedica/Views/Medicos/Create.cshtml]

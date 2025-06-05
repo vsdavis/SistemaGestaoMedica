@@ -81,7 +81,15 @@
               "target": "Package",
               "version": "[4.0.0, )"
             },
+            "NodaTime": {
+              "target": "Package",
+              "version": "[3.2.2, )"
+            },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime": {
               "target": "Package",
               "version": "[8.0.0, )"
             }

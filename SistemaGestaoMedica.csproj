@@ -7,6 +7,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Compile Remove="Views\Medicamentos\index.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.1" />
 		<PackageReference Include="Microsoft.jQuery.Unobtrusive.Validation" Version="4.0.0" />
 		<PackageReference Include="Microsoft.jQuery.Unobtrusive.Ajax" Version="3.3.0" />
@@ -18,7 +22,9 @@
 			<PrivateAssets>all</PrivateAssets>
 		</PackageReference>
 		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+		<PackageReference Include="NodaTime" Version="3.2.2" />
 		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.0" />
+		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime" Version="8.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>

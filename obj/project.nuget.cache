@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VAMM8fqshGI=",
+  "dgSpecHash": "ioIR+MzRkGg=",
   "success": true,
   "projectFilePath": "C:\\Users\\goku1\\source\\repos\\vsdavis\\SistemaGestaoMedica\\SistemaGestaoMedica\\SistemaGestaoMedica.csproj",
   "expectedPackageFiles": [
@@ -104,8 +104,11 @@
     "C:\\Users\\goku1\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
     "C:\\Users\\goku1\\.nuget\\packages\\mono.texttemplating\\2.3.1\\mono.texttemplating.2.3.1.nupkg.sha512",
     "C:\\Users\\goku1\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\goku1\\.nuget\\packages\\nodatime\\3.2.2\\nodatime.3.2.2.nupkg.sha512",
     "C:\\Users\\goku1\\.nuget\\packages\\npgsql\\8.0.0\\npgsql.8.0.0.nupkg.sha512",
     "C:\\Users\\goku1\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\8.0.0\\npgsql.entityframeworkcore.postgresql.8.0.0.nupkg.sha512",
+    "C:\\Users\\goku1\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql.nodatime\\8.0.0\\npgsql.entityframeworkcore.postgresql.nodatime.8.0.0.nupkg.sha512",
+    "C:\\Users\\goku1\\.nuget\\packages\\npgsql.nodatime\\8.0.0\\npgsql.nodatime.8.0.0.nupkg.sha512",
     "C:\\Users\\goku1\\.nuget\\packages\\nuget.common\\6.11.0\\nuget.common.6.11.0.nupkg.sha512",
     "C:\\Users\\goku1\\.nuget\\packages\\nuget.configuration\\6.11.0\\nuget.configuration.6.11.0.nupkg.sha512",
     "C:\\Users\\goku1\\.nuget\\packages\\nuget.dependencyresolver.core\\6.11.0\\nuget.dependencyresolver.core.6.11.0.nupkg.sha512",

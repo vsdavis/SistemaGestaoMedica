@@ -43,7 +43,9 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.7",
           "Microsoft.jQuery.Unobtrusive.Ajax": "3.3.0",
           "Microsoft.jQuery.Unobtrusive.Validation": "4.0.0",
+          "NodaTime": "3.2.2",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.0",
+          "Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime": "8.0.0",
           "Microsoft.AspNetCore.Antiforgery": "8.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "8.0.0.0",
           "Microsoft.AspNetCore.Authentication.BearerToken": "8.0.0.0",
@@ -1779,6 +1781,17 @@
           "lib/net6.0/Newtonsoft.Json.dll": {}
         }
       },
+      "NodaTime/3.2.2": {
+        "runtime": {
+          "lib/net8.0/NodaTime.dll": {
+            "assemblyVersion": "3.2.2.0",
+            "fileVersion": "3.2.2.0"
+          }
+        },
+        "compile": {
+          "lib/net8.0/NodaTime.dll": {}
+        }
+      },
       "Npgsql/8.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Logging.Abstractions": "8.0.0"
@@ -1808,6 +1821,36 @@
         },
         "compile": {
           "lib/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {}
+        }
+      },
+      "Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime/8.0.0": {
+        "dependencies": {
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.0",
+          "Npgsql.NodaTime": "8.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime.dll": {}
+        }
+      },
+      "Npgsql.NodaTime/8.0.0": {
+        "dependencies": {
+          "NodaTime": "3.2.2",
+          "Npgsql": "8.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Npgsql.NodaTime.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/net6.0/Npgsql.NodaTime.dll": {}
         }
       },
       "NuGet.Common/6.11.0": {
@@ -4673,6 +4716,13 @@
       "path": "newtonsoft.json/13.0.3",
       "hashPath": "newtonsoft.json.13.0.3.nupkg.sha512"
     },
+    "NodaTime/3.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dmju5W0UYC3QP/UJM0juKAZkH0HSDMp0gH91A0+mT9M0kgyM2Jm67hUZPl/WRQLq8Lijjqmdk8kyAViWFWM7dA==",
+      "path": "nodatime/3.2.2",
+      "hashPath": "nodatime.3.2.2.nupkg.sha512"
+    },
     "Npgsql/8.0.0": {
       "type": "package",
       "serviceable": true,
@@ -4686,6 +4736,20 @@
       "sha512": "sha512-GDXiMS9peEdjSCU/rfgyHruio7q6tYuywGaktqEi6UPQ6ILechp3fVVX+dHXkIXt4nklCBzYVWkzFrSL9ubKUA==",
       "path": "npgsql.entityframeworkcore.postgresql/8.0.0",
       "hashPath": "npgsql.entityframeworkcore.postgresql.8.0.0.nupkg.sha512"
+    },
+    "Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WeVTx/D+oZLviWMAWRKougg+vsvwoDj+WeFM1E/hUhhzU2AJQMpRGAf8Tn0BJaJuhUI8WymgnDse82SwVb3jXQ==",
+      "path": "npgsql.entityframeworkcore.postgresql.nodatime/8.0.0",
+      "hashPath": "npgsql.entityframeworkcore.postgresql.nodatime.8.0.0.nupkg.sha512"
+    },
+    "Npgsql.NodaTime/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7CtWDIP2MOrlmfOOc/euhfwf5H2g2Shg/Ov7ku5oqF8PrnIXROZSAnLYVwXL3OUbP3Ar2B3ZZiCsyvRxODWYeQ==",
+      "path": "npgsql.nodatime/8.0.0",
+      "hashPath": "npgsql.nodatime.8.0.0.nupkg.sha512"
     },
     "NuGet.Common/6.11.0": {
       "type": "package",

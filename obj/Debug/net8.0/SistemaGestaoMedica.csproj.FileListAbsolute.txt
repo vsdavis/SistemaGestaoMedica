@@ -233,10 +233,6 @@ C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\obj\
 C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\obj\Debug\net8.0\ref\SistemaGestaoMedica.dll
 C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\bin\Debug\net8.0\Npgsql.dll
 C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
-C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\bin\Debug\net8.0\SistemaGestaoMedica.staticwebassets.endpoints.json
-C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\obj\Debug\net8.0\staticwebassets\msbuild.SistemaGestaoMedica.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\bin\Debug\net8.0\libman.json
 C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Antiforgery.dll
 C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
@@ -338,8 +334,6 @@ C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\bin\
 C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\bin\Debug\net8.0\refs\Microsoft.Extensions.Configuration.KeyPerFile.dll
 C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\bin\Debug\net8.0\refs\Microsoft.Extensions.Configuration.UserSecrets.dll
 C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\bin\Debug\net8.0\refs\Microsoft.Extensions.Configuration.Xml.dll
-C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\bin\Debug\net8.0\refs\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\bin\Debug\net8.0\refs\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\bin\Debug\net8.0\refs\Microsoft.Extensions.Diagnostics.Abstractions.dll
 C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\bin\Debug\net8.0\refs\Microsoft.Extensions.Diagnostics.dll
 C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\bin\Debug\net8.0\refs\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
@@ -413,7 +407,6 @@ C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\bin\
 C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\bin\Debug\net8.0\refs\System.Drawing.dll
 C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\bin\Debug\net8.0\refs\System.Drawing.Primitives.dll
 C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\bin\Debug\net8.0\refs\System.Dynamic.Runtime.dll
-C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\bin\Debug\net8.0\refs\System.Formats.Asn1.dll
 C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\bin\Debug\net8.0\refs\System.Formats.Tar.dll
 C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\bin\Debug\net8.0\refs\System.Globalization.Calendars.dll
 C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\bin\Debug\net8.0\refs\System.Globalization.dll
@@ -542,3 +535,14 @@ C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\bin\
 C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
 C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
 C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\obj\Debug\net8.0\SistemaGestaoMedica.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\bin\Debug\net8.0\SistemaGestaoMedica.staticwebassets.endpoints.json
+C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\bin\Debug\net8.0\refs\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\bin\Debug\net8.0\refs\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\bin\Debug\net8.0\refs\System.Formats.Asn1.dll
+C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\obj\Debug\net8.0\staticwebassets\msbuild.SistemaGestaoMedica.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\bin\Debug\net8.0\NodaTime.dll
+C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime.dll
+C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\bin\Debug\net8.0\Npgsql.NodaTime.dll
+C:\Users\goku1\source\repos\vsdavis\SistemaGestaoMedica\SistemaGestaoMedica\obj\Debug\net8.0\EFCoreNpgsqlNodaTime.cs

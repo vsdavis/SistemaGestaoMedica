@@ -1,0 +1,273 @@
+﻿@model IEnumerable<SistemaGestaoMedica.Models.Medicamento>
+
+@{
+    ViewData["Title"] = "Medicamentos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+<style>
+    .medicamentos-container {
+        max-width: 1400px;
+        margin: 30px auto;
+        padding: 20px;
+    }
+
+    .header-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .header-title {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #2c3e50;
+    }
+
+    .btn-custom {
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+        .btn-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+    .search-card {
+        background-color: #f8f9fc;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .table-medicamentos {
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.1);
+    }
+
+        .table-medicamentos thead {
+            background: linear-gradient(135deg, #4e73df 0%, #224abe 100%);
+            color: white;
+        }
+
+        .table-medicamentos th {
+            padding: 16px;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .table-medicamentos td {
+            padding: 14px 16px;
+            vertical-align: middle;
+            border-top: 1px solid #f0f2f5;
+        }
+
+        .table-medicamentos tbody tr {
+            transition: background-color 0.2s;
+        }
+
+            .table-medicamentos tbody tr:hover {
+                background-color: #f8fafc;
+            }
+
+    .badge-status {
+        padding: 6px 10px;
+        border-radius: 20px;
+        font-weight: 500;
+        font-size: 0.8rem;
+    }
+
+    .badge-ativo {
+        background-color: #1cc88a;
+        color: white;
+    }
+
+    .badge-inativo {
+        background-color: #e74a3b;
+        color: white;
+    }
+
+    .badge-tarja {
+        padding: 5px 8px;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: 500;
+    }
+
+    .tarja-livre {
+        background-color: #36b9cc;
+        color: white;
+    }
+
+    .tarja-vermelha {
+        background-color: #f6c23e;
+        color: #2c3e50;
+    }
+
+    .tarja-preta {
+        background-color: #5a5c69;
+        color: white;
+    }
+
+    .action-buttons .btn {
+        padding: 6px 10px;
+        margin: 0 3px;
+        font-size: 0.85rem;
+        border-radius: 6px;
+        transition: all 0.2s;
+    }
+
+        .action-buttons .btn:hover {
+            transform: scale(1.05);
+        }
+
+    .empty-state {
+        text-align: center;
+        padding: 40px;
+        color: #6c757d;
+    }
+
+        .empty-state i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #dddfeb;
+        }
+</style>
+
+<div class="medicamentos-container">
+    <div class="header-section">
+        <h1 class="header-title">
+            <i class="fas fa-pills me-2"></i>Cadastro de Medicamentos
+        </h1>
+        <a href="@Url.Action("Create")" class="btn btn-success btn-custom">
+            <i class="fas fa-plus me-1"></i> Novo Medicamento
+        </a>
+    </div>
+
+    <div class="search-card">
+        <form asp-action="Index" method="get" class="row g-3">
+            <div class="col-md-8">
+                <div class="input-group">
+                    <span class="input-group-text bg-white"><i class="fas fa-search"></i></span>
+                    <input type="text" name="searchString" class="form-control" placeholder="Pesquisar medicamentos..." value="@ViewData["CurrentFilter"]">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <select name="filterStatus" class="form-select">
+                    <option value="">Todos status</option>
+                    <option value="true">Ativos</option>
+                    <option value="false">Inativos</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-primary w-100">
+                    <i class="fas fa-filter me-1"></i>Filtrar
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-medicamentos">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Fabricante</th>
+                    <th>Preço</th>
+                    <th>Estoque</th>
+                    <th>Tarja</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Any())
+                {
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                <strong>@Html.DisplayFor(modelItem => item.Nome)</strong>
+                                @if (!string.IsNullOrEmpty(item.RegistroAnvisa))
+                                {
+                                    <div class="text-muted small">Reg: @item.RegistroAnvisa</div>
+                                }
+                            </td>
+                            <td>@Html.DisplayFor(modelItem => item.Fabricante)</td>
+                            <td>R$ @Html.DisplayFor(modelItem => item.Preco)</td>
+                            <td>
+                                @if (item.QuantidadeEstoque > 10)
+                                {
+                                    <span class="text-success">@item.QuantidadeEstoque</span>
+                                }
+                                else if (item.QuantidadeEstoque > 0)
+                                {
+                                    <span class="text-warning">@item.QuantidadeEstoque</span>
+                                }
+                                else
+                                {
+                                    <span class="text-danger">@item.QuantidadeEstoque</span>
+                                }
+                            </td>
+                            <td>
+                                @if (!string.IsNullOrEmpty(item.Tarja))
+                                {
+                                    var tarjaClass = item.Tarja switch
+                                    {
+                                        "Livre" => "tarja-livre",
+                                        "Vermelha" => "tarja-vermelha",
+                                        "Preta" => "tarja-preta",
+                                        _ => ""
+                                    };
+                                    <span class="badge-tarja @tarjaClass">@item.Tarja</span>
+                                }
+                            </td>
+                            <td>
+                                @if (item.Ativo)
+                                {
+                                    <span class="badge-status badge-ativo">Ativo</span>
+                                }
+                                else
+                                {
+                                    <span class="badge-status badge-inativo">Inativo</span>
+                                }
+                            </td>
+                            <td class="action-buttons">
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-primary" title="Editar">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-info" title="Detalhes">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger" title="Desativar">
+                                    <i class="fas fa-trash-alt"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="7">
+                            <div class="empty-state">
+                                <i class="fas fa-pills"></i>
+                                <h4>Nenhum medicamento cadastrado</h4>
+                                <p>Clique no botão "Novo Medicamento" para adicionar um novo registro</p>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

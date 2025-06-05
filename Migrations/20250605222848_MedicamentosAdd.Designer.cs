@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using SistemaGestaoMedica.Data;
@@ -11,9 +12,11 @@ using SistemaGestaoMedica.Data;
 namespace SistemaGestaoMedica.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250605222848_MedicamentosAdd")]
+    partial class MedicamentosAdd
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,52 +24,6 @@ namespace SistemaGestaoMedica.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
-
-            modelBuilder.Entity("SistemaGestaoMedica.Models.Agendamento", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<bool>("Confirmado")
-                        .HasColumnType("boolean");
-
-                    b.Property<DateTime>("DataAgendamento")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<DateTime?>("DataAtualizacao")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<DateTime>("DataCriacao")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<TimeSpan>("Horario")
-                        .HasColumnType("interval");
-
-                    b.Property<int>("MedicoId")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("Observacoes")
-                        .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("character varying(500)");
-
-                    b.Property<int>("PacienteId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("TipoConsulta")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("MedicoId");
-
-                    b.HasIndex("PacienteId");
-
-                    b.ToTable("Agendamentos");
-                });
 
             modelBuilder.Entity("SistemaGestaoMedica.Models.Exame", b =>
                 {
@@ -332,25 +289,6 @@ namespace SistemaGestaoMedica.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Recepsionistas");
-                });
-
-            modelBuilder.Entity("SistemaGestaoMedica.Models.Agendamento", b =>
-                {
-                    b.HasOne("SistemaGestaoMedica.Models.Medico", "Medico")
-                        .WithMany()
-                        .HasForeignKey("MedicoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("SistemaGestaoMedica.Models.Paciente", "Paciente")
-                        .WithMany()
-                        .HasForeignKey("PacienteId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Medico");
-
-                    b.Navigation("Paciente");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,0 +1,482 @@
+﻿@model SistemaGestaoMedica.Models.Agendamento
+
+@{
+    ViewData["Title"] = "Novo Agendamento";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet">
+
+<style>
+    :root {
+        --primary-color: #4e73df;
+        --secondary-color: #f8f9fc;
+        --accent-color: #2e59d9;
+        --text-color: #5a5c69;
+        --border-color: #e3e6f0;
+        --success-color: #1cc88a;
+        --warning-color: #f6c23e;
+        --danger-color: #e74a3b;
+    }
+
+    .agendamento-container {
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 20px;
+    }
+
+    .form-card {
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08);
+        border: none;
+    }
+
+    .form-card-header {
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+        color: white;
+        padding: 20px;
+        position: relative;
+    }
+
+        .form-card-header h2 {
+            margin: 0;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+
+        .form-card-header .header-icon {
+            font-size: 1.8rem;
+            margin-right: 15px;
+        }
+
+    .form-card-body {
+        padding: 30px;
+        background-color: white;
+    }
+
+    .section-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--border-color);
+        display: flex;
+        align-items: center;
+    }
+
+        .section-title i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+    .form-label {
+        font-weight: 500;
+        color: var(--text-color);
+        margin-bottom: 8px;
+    }
+
+    .required-field::after {
+        content: " *";
+        color: var(--danger-color);
+    }
+
+    .form-control, .form-select, .select2-selection {
+        border-radius: 8px;
+        padding: 10px 15px;
+        border: 1px solid var(--border-color);
+        transition: all 0.3s;
+        height: auto;
+    }
+
+        .form-control:focus, .form-select:focus, .select2-selection:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.25rem rgba(78, 115, 223, 0.25);
+        }
+
+    .select2-container--default .select2-selection--single {
+        height: auto;
+        padding: 10px 15px;
+    }
+
+        .select2-container--default .select2-selection--single .select2-selection__arrow {
+            height: 100%;
+        }
+
+    .input-group-text {
+        background-color: var(--secondary-color);
+        border: 1px solid var(--border-color);
+        color: var(--text-color);
+    }
+
+    .form-check-input {
+        width: 1.2em;
+        height: 1.2em;
+        margin-top: 0.2em;
+    }
+
+    .form-check-label {
+        margin-left: 0.5em;
+    }
+
+    .form-actions {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 25px;
+        margin-top: 25px;
+        border-top: 1px solid var(--border-color);
+    }
+
+    .btn-submit {
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+        border: none;
+        padding: 12px 30px;
+        font-weight: 500;
+        border-radius: 8px;
+        transition: all 0.3s;
+        color: white;
+        display: flex;
+        align-items: center;
+    }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(78, 115, 223, 0.3);
+            color: white;
+        }
+
+        .btn-submit i {
+            margin-right: 8px;
+        }
+
+    .btn-cancel {
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+        border: 1px solid var(--border-color);
+        padding: 12px 25px;
+        font-weight: 500;
+        border-radius: 8px;
+        transition: all 0.3s;
+        display: flex;
+        align-items: center;
+    }
+
+        .btn-cancel:hover {
+            background-color: #e2e6ea;
+            transform: translateY(-2px);
+            color: var(--text-color);
+        }
+
+        .btn-cancel i {
+            margin-right: 8px;
+        }
+
+    .validation-summary-errors ul {
+        padding-left: 0;
+        list-style: none;
+        margin-bottom: 20px;
+    }
+
+    .validation-summary-errors li {
+        color: var(--danger-color);
+        font-size: 0.9rem;
+    }
+
+    .field-validation-error {
+        font-size: 0.85rem;
+        color: var(--danger-color);
+        margin-top: 5px;
+        display: block;
+    }
+
+    .input-has-error {
+        border-color: var(--danger-color) !important;
+    }
+
+    .input-has-success {
+        border-color: var(--success-color) !important;
+    }
+
+    .badge-status {
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-weight: 500;
+        font-size: 0.85rem;
+    }
+
+    .badge-primary {
+        background-color: var(--primary-color);
+        color: white;
+    }
+
+    .badge-success {
+        background-color: var(--success-color);
+        color: white;
+    }
+
+    .badge-warning {
+        background-color: var(--warning-color);
+        color: #000;
+    }
+
+    .badge-danger {
+        background-color: var(--danger-color);
+        color: white;
+    }
+
+    .time-info {
+        background-color: var(--secondary-color);
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+
+        .time-info .info-label {
+            font-weight: 600;
+            color: var(--text-color);
+            margin-right: 5px;
+        }
+
+        .time-info .info-value {
+            font-weight: 500;
+        }
+
+    .paciente-info-card {
+        border-left: 4px solid var(--primary-color);
+        background-color: var(--secondary-color);
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+
+    .form-switch .form-check-input {
+        width: 3em;
+        height: 1.5em;
+    }
+
+    .flatpickr-input {
+        background-color: white;
+    }
+</style>
+
+<div class="agendamento-container">
+    <div class="form-card">
+        <div class="form-card-header">
+            <h2>
+                <i class="fas fa-calendar-plus header-icon"></i>@ViewData["Title"]
+            </h2>
+        </div>
+        <div class="form-card-body">
+            <form asp-action="DetalharAtendimento" method="post" class="needs-validation" novalidate>
+                @Html.AntiForgeryToken()
+
+                <div asp-validation-summary="ModelOnly" class="alert alert-danger mb-4"></div>
+
+                <!-- Informações do Horário -->
+                <div class="time-info">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <span class="info-label">Data:</span>
+                            <span class="info-value">@DateTime.Now.ToString("dd/MM/yyyy")</span>
+                        </div>
+                        <div class="col-md-4">
+                            <span class="info-label">Horário:</span>
+                            <span class="info-value">14:00</span>
+                        </div>
+                        <div class="col-md-4">
+                            <span class="info-label">Duração:</span>
+                            <span class="info-value">30 minutos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seção Paciente -->
+                <h5 class="section-title">
+                    <i class="fas fa-user"></i>Dados do Paciente
+                </h5>
+
+                <div class="paciente-info-card">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label required-field">Paciente</label>
+                            <select class="form-select select2-paciente" required>
+                                <option value="">Selecione um paciente...</option>
+                                <option value="1">Fulano de Tal (CPF: 123.456.789-00)</option>
+                                <option value="2">Ciclano Silva (CPF: 987.654.321-00)</option>
+                                <option value="3">Beltrano Costa (CPF: 456.789.123-00)</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Convênio</label>
+                            <select class="form-select select2-convenio">
+                                <option value="">Selecione um convênio...</option>
+                                <option value="1">Amil Saúde</option>
+                                <option value="2">Unimed</option>
+                                <option value="3">Bradesco Saúde</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Número do Convênio</label>
+                            <input type="text" class="form-control" />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Validade do Convênio</label>
+                            <input type="text" class="form-control flatpickr-date" placeholder="Selecione a data" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seção Médico e Tipo de Consulta -->
+                <h5 class="section-title">
+                    <i class="fas fa-user-md"></i>Dados do Atendimento
+                </h5>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label required-field">Médico</label>
+                        <select class="form-select" required>
+                            <option value="">Selecione o médico...</option>
+                            <option value="1" selected>Dr. João Silva (Cardiologia)</option>
+                            <option value="2">Dra. Maria Oliveira (Pediatria)</option>
+                            <option value="3">Dr. Carlos Souza (Ortopedia)</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label required-field">Tipo de Consulta</label>
+                        <select class="form-select" required>
+                            <option value="">Selecione o tipo...</option>
+                            <option value="1">Consulta de Rotina</option>
+                            <option value="2">Retorno</option>
+                            <option value="3">Urgência</option>
+                            <option value="4">Exame</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Seção Detalhes -->
+                <h5 class="section-title">
+                    <i class="fas fa-clipboard-list"></i>Detalhes do Agendamento
+                </h5>
+
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <label class="form-label">Procedimento/Motivo</label>
+                        <select class="form-select select2-procedimento">
+                            <option value="">Selecione um procedimento...</option>
+                            <option value="1">Consulta Cardiológica</option>
+                            <option value="2">Avaliação Pré-Operatória</option>
+                            <option value="3">Acompanhamento de Tratamento</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <label class="form-label">Observações</label>
+                        <textarea class="form-control" rows="3" placeholder="Informe qualquer observação importante..."></textarea>
+                    </div>
+                </div>
+
+                <!-- Seção Status -->
+                <h5 class="section-title">
+                    <i class="fas fa-check-circle"></i>Status do Agendamento
+                </h5>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="confirmado" checked>
+                            <label class="form-check-label" for="confirmado">Confirmado</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="pagamento">
+                            <label class="form-check-label" for="pagamento">Pagamento Realizado</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <a href="@Url.Action("Index", "Agenda")" class="btn btn-cancel">
+                        <i class="fas fa-times me-1"></i>Cancelar
+                    </a>
+                    <button type="submit" class="btn btn-submit">
+                        <i class="fas fa-save me-1"></i>Salvar Agendamento
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/pt.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializa Select2
+            $('.select2-paciente').select2({
+                placeholder: "Selecione um paciente...",
+                allowClear: true
+            });
+
+            $('.select2-convenio').select2({
+                placeholder: "Selecione um convênio...",
+                allowClear: true
+            });
+
+            $('.select2-procedimento').select2({
+                placeholder: "Selecione um procedimento...",
+                allowClear: true
+            });
+
+            // Inicializa Flatpickr para datas
+            flatpickr(".flatpickr-date", {
+                locale: "pt",
+                dateFormat: "d/m/Y",
+                allowInput: true
+            });
+
+            // Validação em tempo real
+            const inputs = document.querySelectorAll('.form-control, .form-select');
+
+            inputs.forEach(input => {
+                input.addEventListener('input', function() {
+                    if (this.checkValidity()) {
+                        this.classList.remove('input-has-error');
+                        this.classList.add('input-has-success');
+                    } else {
+                        this.classList.remove('input-has-success');
+                        this.classList.add('input-has-error');
+                    }
+                });
+            });
+
+            // Validação ao enviar o formulário
+            const form = document.querySelector('.needs-validation');
+            form.addEventListener('submit', function(event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+
+                    // Adiciona classes de erro para todos os campos inválidos
+                    form.querySelectorAll(':invalid').forEach(el => {
+                        el.classList.add('input-has-error');
+                    });
+                }
+
+                form.classList.add('was-validated');
+            }, false);
+        });
+    </script>
+}
