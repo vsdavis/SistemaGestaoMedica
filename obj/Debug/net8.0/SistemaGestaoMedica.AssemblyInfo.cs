@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SistemaGestaoMedica")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d56c7c740ba2bbc2453f341860a85d40395792c1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a72a6e1e9789876a6720bdb70bae9e93d4aadb13")]
 [assembly: System.Reflection.AssemblyProductAttribute("SistemaGestaoMedica")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SistemaGestaoMedica")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

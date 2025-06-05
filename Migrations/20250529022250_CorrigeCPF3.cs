@@ -7,7 +7,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace SistemaGestaoMedica.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class CorrigeCPF3 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -42,20 +42,22 @@ namespace SistemaGestaoMedica.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Nome = table.Column<string>(type: "text", nullable: true),
+                    Nome = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
                     DataNascimento = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    CPF = table.Column<int>(type: "integer", nullable: false),
+                    CPF = table.Column<string>(type: "character varying(14)", maxLength: 14, nullable: false),
+                    Email = table.Column<string>(type: "text", nullable: true),
+                    Telefone = table.Column<string>(type: "text", nullable: true),
+                    Endereco = table.Column<string>(type: "text", nullable: true),
                     PlanoSaude = table.Column<string>(type: "text", nullable: true),
+                    PlanoCodigo = table.Column<string>(type: "text", nullable: true),
                     PlanoValidade = table.Column<string>(type: "text", nullable: true),
                     PlanoCobertura = table.Column<string>(type: "text", nullable: true),
-                    doencasCronicas = table.Column<string>(type: "text", nullable: true),
+                    DoencasCronicas = table.Column<string>(type: "text", nullable: true),
                     alergias = table.Column<string>(type: "text", nullable: true),
                     medicamentos = table.Column<string>(type: "text", nullable: true),
                     cirurgias = table.Column<string>(type: "text", nullable: true),
                     observacoes = table.Column<string>(type: "text", nullable: true),
-                    contatoEmergencia = table.Column<string>(type: "text", nullable: true),
-                    Email = table.Column<string>(type: "text", nullable: true),
-                    Telefone = table.Column<string>(type: "text", nullable: true)
+                    ContatoEmergencia = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {

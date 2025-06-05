@@ -1,0 +1,195 @@
+﻿@model IEnumerable<SistemaGestaoMedica.Models.Medico>
+@using System.Linq
+
+@{
+    ViewData["Title"] = "Médicos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+<style>
+    .search-card {
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 32px;
+        border-radius: 16px;
+        background: #ffffff;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .form-label {
+        font-weight: 600;
+        color: #495057;
+    }
+
+    .form-control, .form-select {
+        border-radius: 12px;
+        border: 1px solid #e0e0e0;
+        padding: 10px 15px;
+    }
+
+    .btn-custom {
+        border-radius: 12px;
+        padding: 10px 24px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+    .btn-success {
+        background-color: #28a745;
+        border-color: #28a745;
+    }
+
+    .btn-warning {
+        background-color: #ffc107;
+        color: #000;
+        border-color: #ffc107;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+    .header-title {
+        font-size: 1.75rem;
+        font-weight: 600;
+        margin-bottom: 24px;
+        color: #2c3e50;
+    }
+
+    .table {
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+        .table thead {
+            background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+            color: white;
+        }
+
+        .table th {
+            padding: 15px;
+            font-weight: 500;
+        }
+
+        .table td {
+            padding: 12px 15px;
+            vertical-align: middle;
+        }
+
+    .table-hover tbody tr:hover {
+        background-color: rgba(0, 123, 255, 0.05);
+    }
+
+    .action-buttons .btn {
+        padding: 5px 10px;
+        margin: 0 3px;
+        font-size: 0.85rem;
+    }
+
+    .no-results {
+        text-align: center;
+        padding: 30px;
+        color: #6c757d;
+    }
+
+        .no-results i {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #adb5bd;
+        }
+
+    .search-section {
+        background: #f8f9fa;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 25px;
+    }
+
+    .medico-icon {
+        color: #2575fc;
+        margin-right: 8px;
+    }
+</style>
+
+<div class="search-card">
+    <div class="header-title">
+        <i class="fas fa-user-md medico-icon"></i>Cadastro de Médicos
+    </div>
+
+    <div class="search-section">
+        <form asp-action="Index" method="get" class="row g-3 align-items-end">
+            <div class="col-md-6">
+                <label class="form-label">CRM</label>
+                <input type="text" name="crm" class="form-control" placeholder="Digite o CRM">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Nome</label>
+                <input type="text" name="nome" class="form-control" placeholder="Digite o nome">
+            </div>
+            <div class="col-12 d-flex justify-content-end mt-3">
+                <button type="submit" class="btn btn-warning btn-custom me-2">
+                    <i class="fas fa-search me-1"></i> Pesquisar
+                </button>
+                <a href="@Url.Action("Index")" class="btn btn-primary btn-custom me-2">
+                    <i class="fas fa-list me-1"></i> Listar Todos
+                </a>
+                <a href="@Url.Action("Create")" class="btn btn-success btn-custom">
+                    <i class="fas fa-plus me-1"></i> Novo Médico
+                </a>
+            </div>
+        </form>
+    </div>
+
+    @if (Model != null && Model.Any())
+    {
+        <div class="mt-4">
+            <h5><i class="fas fa-user-md me-2"></i>Médicos Cadastrados</h5>
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover mt-2">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>CRM</th>
+                            <th>Especialidade</th>
+                            <th>Email</th>
+                            <th>Telefone</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var medico in Model)
+                        {
+                            <tr>
+                                <td>@medico.Nome</td>
+                                <td>@medico.CRM</td>
+                                <td>@medico.Especialidade</td>
+                                <td>@medico.Email</td>
+                                <td>@medico.Telefone</td>
+                                <td class="action-buttons">
+                                    <a href="@Url.Action("Edit", new { id = medico.Id })" class="btn btn-sm btn-primary" title="Editar">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <a href="@Url.Action("Details", new { id = medico.Id })" class="btn btn-sm btn-info" title="Detalhes">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="no-results mt-4">
+            <i class="fas fa-user-md fa-2x"></i>
+            <h5>Nenhum médico encontrado</h5>
+            <p class="text-muted">Tente ajustar os critérios de pesquisa ou cadastre um novo médico</p>
+        </div>
+    }
+</div>

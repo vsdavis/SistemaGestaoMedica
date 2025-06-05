@@ -12,8 +12,8 @@ using SistemaGestaoMedica.Data;
 namespace SistemaGestaoMedica.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250524173807_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20250529022250_CorrigeCPF3")]
+    partial class CorrigeCPF3
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -82,19 +82,35 @@ namespace SistemaGestaoMedica.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("CPF")
-                        .HasColumnType("integer");
+                    b.Property<string>("CPF")
+                        .IsRequired()
+                        .HasMaxLength(14)
+                        .HasColumnType("character varying(14)");
+
+                    b.Property<string>("ContatoEmergencia")
+                        .HasColumnType("text");
 
                     b.Property<DateTime>("DataNascimento")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<string>("DoencasCronicas")
+                        .HasColumnType("text");
+
                     b.Property<string>("Email")
                         .HasColumnType("text");
 
-                    b.Property<string>("Nome")
+                    b.Property<string>("Endereco")
                         .HasColumnType("text");
 
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
                     b.Property<string>("PlanoCobertura")
+                        .HasColumnType("text");
+
+                    b.Property<string>("PlanoCodigo")
                         .HasColumnType("text");
 
                     b.Property<string>("PlanoSaude")
@@ -110,12 +126,6 @@ namespace SistemaGestaoMedica.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("cirurgias")
-                        .HasColumnType("text");
-
-                    b.Property<string>("contatoEmergencia")
-                        .HasColumnType("text");
-
-                    b.Property<string>("doencasCronicas")
                         .HasColumnType("text");
 
                     b.Property<string>("medicamentos")

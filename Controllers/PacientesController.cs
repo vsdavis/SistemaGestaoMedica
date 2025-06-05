@@ -1,42 +1,60 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SistemaGestaoMedica.Models;
+using Microsoft.EntityFrameworkCore;
 using SistemaGestaoMedica.Data;
-using System;
+using SistemaGestaoMedica.Models;
 
-namespace SistemaGestaoMedica.Controllers
+public class PacientesController : Controller
 {
-    public class PacientesController : Controller
+    private readonly ApplicationDbContext _context;
+
+    public PacientesController(ApplicationDbContext context)
     {
-        private readonly ApplicationDbContext _context;
+        _context = context;
+    }
 
-        public PacientesController(ApplicationDbContext context)
+    // GET: Pacientes
+    public async Task<IActionResult> Index(string cpf = "", string nome = "")
+    {
+        var query = _context.Pacientes.AsQueryable();
+
+        if (!string.IsNullOrWhiteSpace(cpf))
+            query = query.Where(p => p.CPF != null && p.CPF.Contains(cpf));
+
+        if (!string.IsNullOrWhiteSpace(nome))
+            query = query.Where(p => p.Nome != null && p.Nome.Contains(nome));
+
+        var pacientes = await query.ToListAsync();
+        return View(pacientes);
+    }
+
+    // GET: Pacientes/Create
+    public IActionResult Create()
+    {
+        return View();
+    }
+
+    // POST: Pacientes/Create
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Create(Paciente paciente)
+    {
+        Console.WriteLine("===> MÉTODO CREATE POST");
+        Console.WriteLine($"Nome: {paciente.Nome ?? "[null]"}, CPF: {paciente.CPF ?? "[null]"}");
+
+        if (ModelState.IsValid)
         {
-            _context = context;
+            _context.Add(paciente);
+            await _context.SaveChangesAsync();
+            Console.WriteLine("===> PACIENTE SALVO");
+            return RedirectToAction(nameof(Index));
         }
 
-        public IActionResult Index()
+        Console.WriteLine("===> MODELSTATE INVÁLIDO");
+        foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
         {
-           return View(_context.Pacientes.ToList());
+            Console.WriteLine($"Erro: {error.ErrorMessage}");
         }
 
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Create(Paciente paciente)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Pacientes.Add(paciente);
-                _context.SaveChanges();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(paciente);
-        }
-
-        // Editar, Detalhes, Excluir etc. podem ser adicionados depois
+        return View(paciente);
     }
 }

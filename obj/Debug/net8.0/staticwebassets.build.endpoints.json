@@ -4103,6 +4103,170 @@
       ]
     },
     {
+      "Route": "lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.js",
+      "AssetFile": "lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7872"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"v2nySZafnswY87um3ymbg7p9f766IQspC5oqaqZVX2c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Jun 2025 02:49:04 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-v2nySZafnswY87um3ymbg7p9f766IQspC5oqaqZVX2c="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.min.8ve2wm9mbw.js",
+      "AssetFile": "lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4061"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PAC000yuHt78nszJ2RO0OiDMu/uLzPLRlYTk8J3AO10=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Jun 2025 02:49:04 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8ve2wm9mbw"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PAC000yuHt78nszJ2RO0OiDMu/uLzPLRlYTk8J3AO10="
+        },
+        {
+          "Name": "label",
+          "Value": "lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.min.js"
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.min.js",
+      "AssetFile": "lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4061"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PAC000yuHt78nszJ2RO0OiDMu/uLzPLRlYTk8J3AO10=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Jun 2025 02:49:04 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PAC000yuHt78nszJ2RO0OiDMu/uLzPLRlYTk8J3AO10="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.vs3qwh9hx3.js",
+      "AssetFile": "lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7872"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"v2nySZafnswY87um3ymbg7p9f766IQspC5oqaqZVX2c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Jun 2025 02:49:04 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vs3qwh9hx3"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-v2nySZafnswY87um3ymbg7p9f766IQspC5oqaqZVX2c="
+        },
+        {
+          "Name": "label",
+          "Value": "lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.js"
+        }
+      ]
+    },
+    {
       "Route": "lib/jquery-validation-unobtrusive/LICENSE.356vix0kms.txt",
       "AssetFile": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "Selectors": [],

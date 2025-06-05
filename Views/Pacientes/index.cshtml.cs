@@ -7,6 +7,8 @@ namespace SistemaGestaoMedica.Views.Pacientes
     {
         public void OnGet()
         {
+
+
         }
     }
 }
