@@ -12,5 +12,6 @@ namespace SistemaGestaoMedica.Data
         public DbSet<Medico> Medicos { get; set; }
         public DbSet<Paciente> Pacientes { get; set; }
         public DbSet<Recepsionista> Recepsionistas { get; set; }
+        public DbSet<Exame> Exames { get; set; }
     }
 }
