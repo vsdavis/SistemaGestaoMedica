@@ -7,8 +7,11 @@ Plataforma inteligente e integrada para a **gestão de consultórios médicos**,
 ## 📸 Demonstração
 > *(Adicione aqui prints do sistema em uso)*  
 
-![Tela Inicial]<img width="1600" height="855" alt="image" src="https://github.com/user-attachments/assets/a1194346-c3f2-4cf7-b77a-b9c63e83f2ae" />
-![Agendamento](./images/agendamento.png)  
+## Tela Inicial
+<img width="1600" height="855" alt="image" src="https://github.com/user-attachments/assets/a1194346-c3f2-4cf7-b77a-b9c63e83f2ae" />
+## Agendamento
+<img width="1600" height="851" alt="image" src="https://github.com/user-attachments/assets/fd8b9238-1223-4365-9c68-1b6e57602281" />
+ 
 
 ---
 
