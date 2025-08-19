@@ -1,4 +1,4 @@
-# 🌐 Orbit Technology
+# 🌐 Orbit Technology (OrbitMed)
 
 Plataforma inteligente e integrada para a **gestão de consultórios médicos**, desenvolvida com foco em inovação, eficiência e humanização do atendimento.
 
@@ -61,10 +61,10 @@ Mais que automatizar tarefas, a proposta é entregar uma **experiência digital 
    git clone https://github.com/vsdavis/SistemaGestaoMedica
 
 ---
-Desenvolvido por **David Vieira Souza**.  
+Desenvolvido por **David Vieira Souza** para um projeto academico na **Universidade Nove de Julho**.  
 Caso queira utilizar o sistema para algum intuito, entre em contato: **[vsdavid2005@gmail.com]**
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=25&duration=4000&color=00BFFF&center=true&vCenter=true&width=600&lines=Obrigado+por+visitar+o+Orbit+Technology!;Inovação+e+tecnologia+na+gestão+médica;Feito+com+❤+pela+Equipe+Orbit" alt="Orbit Animation">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=25&duration=4000&color=00BFFF&center=true&vCenter=true&width=600&lines=Obrigado+por+visitar+o+Orbit+Technology!;Inovação+e+tecnologia+na+gestão+médica;A+Uninove+é+10!" alt="Orbit Animation">
 </p>
 
