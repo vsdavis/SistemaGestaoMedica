@@ -5,12 +5,24 @@ Plataforma inteligente e integrada para a **gestão de consultórios médicos**,
 ---
 
 ## 📸 Demonstração
-> *(Adicione aqui prints do sistema em uso)*  
+> *(algumas telas do sistema OrbitMed)*  
 
 ## Tela Inicial
 <img width="1600" height="855" alt="image" src="https://github.com/user-attachments/assets/a1194346-c3f2-4cf7-b77a-b9c63e83f2ae" />
+
 ## Agendamento
 <img width="1600" height="851" alt="image" src="https://github.com/user-attachments/assets/fd8b9238-1223-4365-9c68-1b6e57602281" />
+<img width="1600" height="619" alt="image" src="https://github.com/user-attachments/assets/a17e0a8d-18ce-4144-9518-fe87e68edc58" />
+<img width="1600" height="854" alt="image" src="https://github.com/user-attachments/assets/2c9e5ef2-60db-424d-ba18-f84e8404124a" />
+
+## Cadastro de Pacientes
+<img width="1600" height="855" alt="image" src="https://github.com/user-attachments/assets/731c8abd-a665-4bb8-8b46-c92d44ad6b97" />
+<img width="1600" height="854" alt="image" src="https://github.com/user-attachments/assets/4274168f-aba4-4a6a-9785-d66e9918e073" />
+
+
+
+
+
  
 
 ---
