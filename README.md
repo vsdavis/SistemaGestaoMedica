@@ -47,7 +47,7 @@ Mais que automatizar tarefas, a proposta é entregar uma **experiência digital 
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/orbit-technology.git
+   git clone https://github.com/vsdavis/SistemaGestaoMedica
 
 ---
 
