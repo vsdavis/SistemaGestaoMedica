@@ -19,10 +19,6 @@ Plataforma inteligente e integrada para a **gestão de consultórios médicos**,
 <img width="1600" height="855" alt="image" src="https://github.com/user-attachments/assets/731c8abd-a665-4bb8-8b46-c92d44ad6b97" />
 <img width="1600" height="854" alt="image" src="https://github.com/user-attachments/assets/4274168f-aba4-4a6a-9785-d66e9918e073" />
 
-
-
-
-
  
 
 ---
@@ -53,8 +49,8 @@ Mais que automatizar tarefas, a proposta é entregar uma **experiência digital 
 ## 🛠️ Tecnologias Utilizadas
 - **C#** – desenvolvimento do back-end.  
 - **Entity Framework** – mapeamento objeto-relacional.  
-- **PostgreSQL** – banco de dados seguro e robusto.  
-- **Scrum** – organização ágil do desenvolvimento.  
+- **PostgreSQL** – banco de dados seguro e robusto.    
+- **MVC (Model-View-Controller)** – arquitetura para organização do sistema.  
 
 ---
 
@@ -65,6 +61,8 @@ Mais que automatizar tarefas, a proposta é entregar uma **experiência digital 
    git clone https://github.com/vsdavis/SistemaGestaoMedica
 
 ---
+Desenvolvido por **David Vieira Souza**.  
+Caso queira utilizar o sistema para algum intuito, entre em contato: **[vsdavid2005@gmail.com]**
 
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=25&duration=4000&color=00BFFF&center=true&vCenter=true&width=600&lines=Obrigado+por+visitar+o+Orbit+Technology!;Inovação+e+tecnologia+na+gestão+médica;Feito+com+❤+pela+Equipe+Orbit" alt="Orbit Animation">
