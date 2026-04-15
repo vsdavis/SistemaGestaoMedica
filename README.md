@@ -1,10 +1,10 @@
-# 🌐 Orbit Technology (OrbitMed)
+#  Orbit Technology (OrbitMed)
 
 Plataforma inteligente e integrada para a **gestão de consultórios médicos**, desenvolvida com foco em inovação, eficiência e humanização do atendimento.
 
 ---
 
-## 📸 Demonstração
+## Demonstração
 > *(algumas telas do sistema OrbitMed)*  
 
 ## Tela Inicial
@@ -23,7 +23,7 @@ Plataforma inteligente e integrada para a **gestão de consultórios médicos**,
 
 ---
 
-## 🚀 Sobre o Projeto
+##  Sobre o Projeto
 O **Orbit Technology** busca transformar a rotina de médicos, recepcionistas e pacientes através de uma solução digital completa.  
 
 Principais funcionalidades:  
@@ -37,7 +37,7 @@ Mais que automatizar tarefas, a proposta é entregar uma **experiência digital 
 
 ---
 
-## 🎯 Objetivos
+##  Objetivos
 - Digitalizar e otimizar a gestão de consultórios médicos.  
 - Automatizar processos administrativos e clínicos.  
 - Melhorar a experiência de médicos e pacientes.  
@@ -54,7 +54,7 @@ Mais que automatizar tarefas, a proposta é entregar uma **experiência digital 
 
 ---
 
-## 📦 Instalação e Execução
+##  Instalação e Execução
 
 1. Clone o repositório:
    ```bash
